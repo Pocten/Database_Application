@@ -1,0 +1,34 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.2"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+    <!-- Define persistence unit -->
+    <persistence-unit name="pu">
+        <!-- This depends on the chosen implementation -->
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+        <!-- Entities managed by the persistence unit -->
+        <class>entities.Pacient</class>
+        <class>entities.Psychiatrist</class>
+        <class>entities.Examination</class>
+
+
+        <properties>
+            <!-- database connection with postrgresql -->
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://slon.felk.cvut.cz:5432/db21_iastrnik" />
+            <property name="javax.persistence.jdbc.user" value="db21_iastrnik" />
+            <property name="javax.persistence.jdbc.password" value="Th6p9K" />
+            <!--            &lt;!&ndash; database connection with H2 &ndash;&gt;-->
+            <!--            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />-->
+            <!--            <property name="javax.persistence.jdbc.url" value="jdbc:h2:/~test" />-->
+            <!--            <property name="javax.persistence.jdbc.user" value="postgres" />-->
+            <!--            <property name="javax.persistence.jdbc.password" value="postgres" />-->
+
+            <!-- create database schema from entities-->
+            <property name="javax.persistence.schema-generation.database.action" value="create" />
+            <property name="eclipselink.ddl-generation" value="create-tables" />
+            <property name="eclipselink.ddl-generation.output-mode" value="database" />
+
+        </properties>
+    </persistence-unit>
+</persistence>

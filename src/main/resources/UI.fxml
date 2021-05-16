@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="hospital_panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1024.0" style="-fx-background-color: #7396D9;" xmlns="http://javafx.com/javafx/8.0.281" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d0e8ff" height="43.0" layoutX="41.0" layoutY="14.0" stroke="#004dff" strokeType="INSIDE" width="302.0" />
+      <Label layoutX="154.0" layoutY="22.0" prefHeight="27.0" prefWidth="63.0" text="Pacient">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label graphicTextGap="6.0" layoutX="56.0" layoutY="66.0" text="First name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label graphicTextGap="6.0" layoutX="56.0" layoutY="104.0" text="Last name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label graphicTextGap="6.0" layoutX="57.0" layoutY="142.0" text="Age">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label graphicTextGap="6.0" layoutX="57.0" layoutY="180.0" text="City">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label graphicTextGap="6.0" layoutX="52.0" layoutY="217.0" text="Rodné čislo">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="pacient_first_name_filed" layoutX="153.0" layoutY="64.0" />
+      <TextField fx:id="pacient_last_name_filed" layoutX="153.0" layoutY="101.0" />
+      <TextField fx:id="pacient_age_filed" layoutX="153.0" layoutY="139.0" />
+      <TextField fx:id="pacient_city_filed" layoutX="153.0" layoutY="177.0" />
+      <TextField fx:id="pacient_rodne_cislo_filed" layoutX="153.0" layoutY="214.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d0e8ff" height="43.0" layoutX="41.0" layoutY="318.0" stroke="#004dff" strokeType="INSIDE" width="302.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a9bed1" height="55.0" layoutX="45.0" layoutY="254.0" stroke="WHITE" strokeType="INSIDE" width="302.0" />
+      <Button fx:id="pacient_create_button" layoutX="63.0" layoutY="265.0" mnemonicParsing="false" style="-fx-background-color: #0CAD1C;" text="Create" />
+      <Button fx:id="pacient_update_button" layoutX="160.0" layoutY="265.0" mnemonicParsing="false" text="Update" />
+      <Button fx:id="pacient_delete_button" layoutX="262.0" layoutY="265.0" mnemonicParsing="false" style="-fx-background-color: #E64C4E;" text="Delete" />
+
+      <!--      Table_Pacient    -->
+      <TableView fx:id="pacient_table" layoutX="436.0" layoutY="19.0" prefHeight="238.0" prefWidth="560.0" style="-fx-background-color: #d0e8ff;">
+        <columns>
+
+          <TableColumn fx:id="pacient_id_column" prefWidth="35.20001220703125" text="id">
+             <cellValueFactory>
+                <PropertyValueFactory property="id" />
+             </cellValueFactory>
+          </TableColumn>
+
+          <TableColumn fx:id="pacient_first_name_column" prefWidth="108.80001831054688" text="First name">
+             <cellValueFactory>
+                <PropertyValueFactory property="pacientFirstName" />
+             </cellValueFactory>
+          </TableColumn>
+
+            <TableColumn fx:id="pacient_last_name_column" prefWidth="123.199951171875" text="Last name">
+               <cellValueFactory>
+                  <PropertyValueFactory property="pacientLastName" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="pacient_rodne_cislo_column" prefWidth="103.2000732421875" text="Rodne cislo">
+               <cellValueFactory>
+                  <PropertyValueFactory property="rodneCislo" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="pacient_age_column" minWidth="4.0" prefWidth="48.7999267578125" text="Age">
+               <cellValueFactory>
+                  <PropertyValueFactory property="age" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="pacient_city_column" prefWidth="137.5999755859375" text="City">
+               <cellValueFactory>
+                  <PropertyValueFactory property="City" />
+               </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+
+      <!-- END OF TABLE "PACIENT" -->
+
+      <Label layoutX="145.0" layoutY="325.0" prefHeight="27.0" prefWidth="90.0" text="Psychiatrist">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label graphicTextGap="6.0" layoutX="59.0" layoutY="372.0" text="First name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label graphicTextGap="6.0" layoutX="59.0" layoutY="413.0" text="Last name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="psychiatrist_first_name_field" layoutX="151.0" layoutY="370.0" />
+      <TextField fx:id="psychiatrist_last_name_field" layoutX="151.0" layoutY="410.0" />
+
+
+      <!-- START OF PSYCHIATRIST TABLE -->
+      <TableView fx:id="psychiatrist_table" layoutX="436.0" layoutY="279.0" prefHeight="159.0" prefWidth="560.0" style="-fx-background-color: #d0e8ff;">
+         <columns>
+
+            <TableColumn fx:id="psychiatrist_id_column" prefWidth="35.20001220703125" text="id">
+               <cellValueFactory>
+                  <PropertyValueFactory property="id" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="psychiatrist_first_name_column" prefWidth="243.99990844726562" text="First name">
+               <cellValueFactory>
+                  <PropertyValueFactory property="psychiatristFirstName" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="psychiatrist_last_name_column" prefWidth="280.0" text="Last  name">
+               <cellValueFactory>
+                  <PropertyValueFactory property="psychiatristLastName" />
+               </cellValueFactory>
+            </TableColumn>
+
+         </columns>
+      </TableView>
+      <!-- END OF PSYCHIATRIST TABLE -->
+
+
+      
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d0e8ff" height="43.0" layoutX="45.0" layoutY="449.0" stroke="#004dff" strokeType="INSIDE" width="302.0" />
+      <Label layoutX="144.0" layoutY="456.0" prefHeight="27.0" prefWidth="102.0" text="Examination">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label graphicTextGap="6.0" layoutX="54.0" layoutY="501.0" text="Pacient id">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label graphicTextGap="6.0" layoutX="54.0" layoutY="541.0" text="Psychiatrist id">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label graphicTextGap="6.0" layoutX="55.0" layoutY="580.0" text="Date">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label graphicTextGap="6.0" layoutX="55.0" layoutY="621.0" text="Time">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="examination_pacient_id_filed" layoutX="151.0" layoutY="499.0" />
+      <TextField fx:id="examination_psychiatrist_id_filed" layoutX="151.0" layoutY="538.0" />
+      <TextField fx:id="examination_date_filed" layoutX="151.0" layoutY="577.0" promptText="Year-Month-Day" />
+      <TextField fx:id="examination_time_filed" layoutX="151.0" layoutY="617.0" promptText="HH:MM" />
+      <Label graphicTextGap="6.0" layoutX="55.0" layoutY="660.0" text="Department">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="examination_department_filed" layoutX="151.0" layoutY="657.0" />
+      <Label graphicTextGap="6.0" layoutX="55.0" layoutY="700.0" text="Room">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="examination_room_filed" layoutX="151.0" layoutY="697.0" />
+
+
+
+      <!-- EXAMINATION TABLE -->
+
+      <TableView fx:id="examination_table" layoutX="436.0" layoutY="458.0" prefHeight="327.0" prefWidth="560.0" style="-fx-background-color: #d0e8ff;">
+         <columns>
+
+            <TableColumn fx:id="examination_id_column" prefWidth="35.20001220703125" text="id">
+               <cellValueFactory>
+                  <PropertyValueFactory property="id" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="examination_pacient_id" prefWidth="78.4000244140625" text="Pacient id">
+               <cellValueFactory>
+                  <PropertyValueFactory property="pacient_id" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="examination_psychiatrist_id" prefWidth="117.60003662109375" text="Psychiatrist id">
+               <cellValueFactory>
+                  <PropertyValueFactory property="psychiatrist_id" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="examination_date_column" prefWidth="88.7999267578125" text="Date">
+               <cellValueFactory>
+                  <PropertyValueFactory property="date" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="examination_time_column" prefWidth="64.800048828125" text="Time">
+               <cellValueFactory>
+                  <PropertyValueFactory property="time" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="examination_department_column" prefWidth="103.9998779296875" text="Department">
+               <cellValueFactory>
+                  <PropertyValueFactory property="department" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="examination_room_column" prefWidth="67.199951171875" text="Room">
+               <cellValueFactory>
+                  <PropertyValueFactory property="room" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <!-- END OF TABLE "EXAMINATION" -->
+
+
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a9bed1" height="55.0" layoutX="41.0" layoutY="733.0" stroke="WHITE" strokeType="INSIDE" width="302.0" />
+      <Button fx:id="examinetion_create_button" layoutX="58.0" layoutY="745.0" mnemonicParsing="false" style="-fx-background-color: #0CAD1C;" text="Create" />
+      <Button fx:id="examination_delete_button" layoutX="257.0" layoutY="745.0" mnemonicParsing="false" style="-fx-background-color: #E64C4E;" text="Delete" />
+      <Line endX="-6.79998779296875" endY="664.0" layoutX="393.0" layoutY="87.0" startX="-6.79998779296875" startY="-72.79999542236328" stroke="#1a4fa9" />
+      <Button fx:id="examination_view_all_button" layoutX="160.0" layoutY="745.0" mnemonicParsing="false" text="View All" />
+   </children>
+</AnchorPane>
